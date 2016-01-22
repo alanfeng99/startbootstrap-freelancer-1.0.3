@@ -23,8 +23,6 @@ app.controller('mainController', function ($scope,$firebaseArray,$location) {
     // the message is automatically added to our Firebase database!
     $scope.submit = function() {
         
-        console.log($scope.inputName + ' ' + $scope.inputImageUrl);
-        
         $scope.users.$add({
           name: $scope.inputName,
           image_url: $scope.inputImageUrl,
@@ -32,7 +30,6 @@ app.controller('mainController', function ($scope,$firebaseArray,$location) {
           description: $scope.inputDescription,
           email: $scope.inputEmail
         });
-        
         $location.hash('portfolio');
     };
 });
