@@ -15,7 +15,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         });
     }]);
 
-app.controller('mainController', function ($scope,$firebaseArray,$location,anchorSmoothScroll) {
+app.controller('mainController', function ($scope,$firebaseArray,anchorSmoothScroll) {
     
     var ref = new Firebase("https://freelance-demo.firebaseio.com/users");
     
@@ -41,9 +41,7 @@ app.controller('mainController', function ($scope,$firebaseArray,$location,ancho
     };
     
     $scope.gotoElement = function (eID){
-      // call $anchorScroll()
       anchorSmoothScroll.scrollTo(eID);
-      
     };
 });
 
