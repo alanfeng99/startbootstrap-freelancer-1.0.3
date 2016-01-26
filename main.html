@@ -16,16 +16,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="" ng-click="gotoElement('page-top')"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio {{fullName()}}</a>
+                        <a href="" ng-click="gotoElement('portfolio')">Portfolio</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a href="" ng-click="gotoElement('about')">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Contact</a>
+                        <a href="" ng-click="gotoElement('contact')">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -60,22 +60,12 @@
                 </div>
             </div>
             <div class="row">
-                <!--<div class="col-sm-4 portfolio-item">-->
-                <!--    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">-->
-                <!--        <div class="caption">-->
-                <!--            <div class="caption-content">-->
-                <!--                <i class="fa fa-search-plus fa-3x"></i>-->
-                <!--            </div>-->
-                <!--        </div>-->
-                <!--        <img src="img/portfolio/cabin.png" class="img-responsive" alt="">-->
-                <!--    </a>-->
-                <!--</div>-->
                 <div class="col-sm-4 portfolio-item" ng-repeat="user in users track by $index">
                     <a href="#portfolioModal{{$index}}" class="portfolio-link" data-toggle="modal" >
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-1x"></i>
-                                <span>  {{user.name}}</span>
+                                <span> {{user.name}}</span>
                             </div>
                         </div>
                         <img src="{{user.image_url}}" class="img-responsive" alt="">
