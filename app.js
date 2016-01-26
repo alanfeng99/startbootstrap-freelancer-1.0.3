@@ -27,12 +27,15 @@ app.controller('mainController', function ($scope,$firebaseArray,$location,ancho
     $scope.submit = function() {
         
         $scope.users.$add({
-          name: $scope.inputName,
-          image_url: $scope.inputImageUrl,
-          phone: $scope.inputPhone,
-          description: $scope.inputDescription,
-          email: $scope.inputEmail
+          name: $scope.input.name,
+          image_url: $scope.input.imageUrl,
+          phone: $scope.input.phone,
+          description: $scope.input.description,
+          email: $scope.input.email
         });
+        
+        //clear input information
+        $scope.input = null;
         
         anchorSmoothScroll.scrollTo('portfolio');
     };
